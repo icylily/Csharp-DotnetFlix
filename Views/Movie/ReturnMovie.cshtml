@@ -1,0 +1,49 @@
+
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" > <h1>Dot Net Flix</h1></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ></div>
+</div>
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" ></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ><a href="/Dashboard">Dashboard</a> | <a href="/Movies">Movies</a> |<a href="javascript:if(confirm('Do you want to log out?'))location='/logout'">Log out </a></div>
+</div>
+
+<hr>
+@model RatingModel
+
+<h2>Thanks for returning your movie!</h2>
+<h2>Please provide a rating for this film.</h2>
+
+
+<form  asp-action="ActionReturnMovie" asp-controller="Movie" method="Post">
+
+
+    <span asp-validation-for="RatingValue" style="color:red;"></span>
+    <label asp-for="RatingValue" class=" col-form-label "></label>
+    <select class="form-control form-control-sm" id="colFormLabel"  asp-for="RatingValue" > 
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        
+    </select>
+
+
+<input type="hidden" asp-for="MovieId" value="@Model.MovieId">
+<input type="hidden" asp-for="UserId" value="@Model.UserId">
+<br>
+<button class="btn btn-primary btn-lg btn-block" type="submit"  onClick="delcfm()" >Return</button>
+</form>
+
+
+<script language="javascript"> 
+    function delcfm() { 
+        if (!confirm("Confirm Return?")) { 
+            window.event.returnValue = false; 
+        } 
+    } 
+</script>
+

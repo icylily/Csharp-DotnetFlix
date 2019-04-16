@@ -1,0 +1,12 @@
+@model AvailableMovie
+
+<h3 class="text-center">Available Movies!</h3>
+<hr>
+
+<div  style="overflow:auto; height:400px; border-left:solid 1px grey; padding-left:10px;">
+    @foreach (var Movie in Model.AvailableMovies)
+        {
+            <li><a href="/Movies/@Movie.MovieId">@Movie.Title</a></li>
+        }
+
+</div>

@@ -1,0 +1,21 @@
+@model AllMovie
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" > <h1>Dot Net Flix</h1></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ></div>
+</div>
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" ></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ><a href="/Dashboard">Dashboard</a> | <a href="javascript:if(confirm('Do you want to log out?'))location='/logout'">Log out </a></div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-md-5 order-md-1">
+        <partial name="NewMoviePartial" model="@Model.NewMovie"/>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <partial name="AllMoviePartial" model="@Model.AvailableMovie"/>
+    </div>
+</div>

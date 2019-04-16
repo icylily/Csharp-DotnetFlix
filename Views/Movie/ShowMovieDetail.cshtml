@@ -1,0 +1,32 @@
+@model MovieDetail
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" > <h1>Dot Net Flix</h1></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ></div>
+</div>
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" ></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ><a href="/Dashboard">Dashboard</a> | <a href="/Movies">Movies</a> |<a href="javascript:if(confirm('Do you want to log out?'))location='/logout'">Log out </a></div>
+</div>
+
+<hr>
+
+<h2>@Model.Movie.Title</h2>
+<h4>Genre:@Model.Movie.Genre</h4>
+<h4>Released Year:@Model.Movie.ReleasedYear</h4>
+<h4>Average Customer Rating: @Model.AverageRating</h4>
+<h4>Your Rating: @Model.YourRating</h4>
+<br>
+@{
+    if (Model.Movie.isAvailable)
+    {
+        <a href="/Movies/Checkout/@Model.Movie.MovieId" class="btn btn-primary">Check out</a>
+
+    }
+    else
+    {
+        <h4 style="color:blue;">You already checked it out!</h4>
+    }
+
+}

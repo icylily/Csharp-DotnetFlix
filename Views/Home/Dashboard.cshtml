@@ -1,0 +1,28 @@
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" > <h1>Dot Net Flix</h1></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ></div>
+</div>
+<div class = "row  align-items-end">
+    <div class = "col-md-4 text-left" ></div>
+    <div class = "col-md-4 align-text-top text-center" >  </div>
+    <div class = "col-md-4 text-center " ><a href="/Movies">Movies</a> | <a href="javascript:if(confirm('Do you want to log out?'))location='/logout'">Log out </a></div>
+</div>
+
+<hr>
+@model Dashboard
+
+<h2>Status</h2>
+<h4>Name: @Model.CurrentUser.FirstName @Model.CurrentUser.LastName</h4>
+<h4># of watched Movies: @Model.WatchedMovies</h4>
+<h4>Join Date: @Model.CurrentUser.CreatedAt.ToString("M/dd/yyyy")</h4>
+
+<br>
+<br>
+<br>
+
+<h2>Movie current Checked out:</h2>
+@foreach (var movie in Model.CurrentCheckedout)
+{
+   <h5><a href="/Movies/@movie.MovieId">@movie.Title</a> | <a href="/Movies/return/@movie.MovieId">Return</a></h5> 
+}
