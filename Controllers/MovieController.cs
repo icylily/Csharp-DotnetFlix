@@ -64,6 +64,12 @@ namespace DotnetFlix.Controllers
                     AllMovie AllMovie = initAllmovie();
                     return View("AllMovie", AllMovie);
                 }
+                if (dbContext.Movies.Any(movie =>movie.Title == newMovie.Title))
+                {
+                    ModelState.AddModelError("Title", "This movie already existed!");
+                    AllMovie AllMovie = initAllmovie();
+                    return View("AllMovie", AllMovie);
+                }
                 else
                 {
                     newMovie.UserId = Loginuser.GetUserID(HttpContext);
@@ -138,7 +144,7 @@ namespace DotnetFlix.Controllers
         [HttpPost("ActionReturnMovie")]
         public IActionResult ActionReturnMovie(RatingModel ratinginfo)
         {
-            Console.WriteLine("get return page");
+            // Console.WriteLine("get return page");
             int currentUser = Loginuser.GetUserID(HttpContext);
             if (currentUser == 0)
             {

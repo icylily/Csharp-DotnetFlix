@@ -55,7 +55,7 @@ using DotnetFlix.Models;
             WriteLiteral("<h1 class=\"text-left\">Dot Net Flix!</h1>\r\n<br><hr>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-5 order-md-1\">\r\n        ");
             EndContext();
             BeginContext(120, 33, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "656670272a064b3bb67a7ce9b4ca6c6a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c6b7c6ac82014e7db086b75130b1d122", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -74,7 +74,7 @@ using DotnetFlix.Models;
             WriteLiteral("\r\n    </div>\r\n    <div class=\"col-md-5 order-md-1\">\r\n        ");
             EndContext();
             BeginContext(214, 30, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "afca4a399517488aab4eca5ab0725f53", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4159030e083146589108958f5795a5b1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
